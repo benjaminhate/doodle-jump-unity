@@ -1,4 +1,5 @@
-﻿using Tools;
+﻿using Game;
+using Tools;
 using UnityEngine;
 
 namespace Platforms

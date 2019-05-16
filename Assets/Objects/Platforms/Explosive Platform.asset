@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Explosive Platform
   m_EditorClassIdentifier: 
   prefab: {fileID: 7825757942215541406, guid: 5825a263694e04e4ab2b24e63d4a0248, type: 3}
-  difficulty: 2
+  difficulty: 5
   hasItem: 0
   xRange:
     minValue: -1.5

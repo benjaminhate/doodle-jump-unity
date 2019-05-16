@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OneShot Platform
   m_EditorClassIdentifier: 
   prefab: {fileID: 4380683342080353517, guid: a67c41b642e75624ba4d47279fac6692, type: 3}
-  difficulty: 5
+  difficulty: 10
   hasItem: 0
   xRange:
     minValue: -2

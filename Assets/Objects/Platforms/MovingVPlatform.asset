@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a91d191f07ca054a8143d9312a78b28, type: 3}
+  m_Name: MovingVPlatform
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 387212085518864849, guid: a22fe164d573606418df71c0c37f15e1, type: 3}
+  difficulty: 15
+  hasItem: 0
+  xRange:
+    minValue: -2
+    maxValue: 2
+  yRange:
+    minValue: 0.5
+    maxValue: 3.9
