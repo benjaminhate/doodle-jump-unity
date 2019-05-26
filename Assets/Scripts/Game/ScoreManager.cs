@@ -5,7 +5,7 @@ namespace Game
 {
     public class ScoreManager : MonoBehaviour
     {
-        public Player player;
+        public Transform player;
         public FloatVariable playerScore;
 
         public const string ScorePrefs = "score";
@@ -17,8 +17,6 @@ namespace Game
         private void Start()
         {
             _baseY = _playerMaxY;
-
-            player.OnDeath += SaveScore;
         
             ResetScore();
         }
@@ -30,7 +28,7 @@ namespace Game
 
         private void UpdateScore()
         {
-            var playerPos = player.transform.position;
+            var playerPos = player.position;
             if (!(playerPos.y > _playerMaxY)) return;
         
             _playerMaxY = playerPos.y;
@@ -44,7 +42,7 @@ namespace Game
             playerScore.value = 0f;
         }
 
-        private void SaveScore()
+        public void SaveScore()
         {
             var highscore = GetSavedScore();
             if(playerScore.value > highscore)

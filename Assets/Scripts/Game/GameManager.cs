@@ -22,11 +22,10 @@ namespace Game
         {
             _basePlayerPosition = player.transform.position;
             
-            player.OnDeath += GameOver;
             Restart();
         }
 
-        private void GameOver()
+        public void GameOver()
         {
             StartCoroutine(GameOverCoroutine());
         }

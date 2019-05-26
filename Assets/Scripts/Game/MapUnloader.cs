@@ -5,17 +5,12 @@ namespace Game
     public class MapUnloader : MonoBehaviour
     {
         public Transform platformParent;
-        public Player player;
+        public Transform player;
         public float unloadDistance = 10f;
-    
-        private void Start()
-        {
-            player.OnJump += Unload;
-        }
 
-        private void Unload()
+        public void Unload()
         {
-            var playerPos = player.transform.position;
+            var playerPos = player.position;
 
             foreach (Transform platform in platformParent)
             {

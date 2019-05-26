@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Platforms;
 using ScriptableObjects;
 using Tools;
 using UnityEngine;
@@ -83,10 +84,17 @@ namespace Game
         
             var pos = new Vector2(xRandom, yRandom);
 
-            _lastPlatformY = yRandom;
 
             var platform = Instantiate(platformPrefab, pos, Quaternion.identity, platformParent);
+            var platformScript = platform.GetComponent<BasePlatform>();
 
+            platformScript.Init();
+
+            var movingPlatform = platform.GetComponent<MovingPlatform>();
+            var yPlatformRange = movingPlatform == null ? 0f : movingPlatform.YRange;
+            
+            _lastPlatformY = yRandom + yPlatformRange;
+            
             if (Random.value <= itemProbability && platformObject.hasItem)
             {
                 GenerateItem(platform.transform);

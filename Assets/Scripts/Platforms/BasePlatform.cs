@@ -7,6 +7,11 @@ namespace Platforms
     public class BasePlatform : MonoBehaviour
     {
         public FloatReference jumpForce;
+
+        public virtual void Init()
+        {
+            
+        }
     
         private void OnCollisionEnter2D(Collision2D other)
         {

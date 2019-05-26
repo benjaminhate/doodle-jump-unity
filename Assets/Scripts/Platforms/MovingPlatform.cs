@@ -23,6 +23,7 @@ namespace Platforms
         public MovingAxis axis;
 
         private bool IsEnabled => gameObject.activeSelf;
+        public float YRange => axis == MovingAxis.YAxis ? _range : 0f;
 
         private float _range;
         private Vector3 _target;
@@ -47,7 +48,7 @@ namespace Platforms
             }
         }
 
-        private void Start()
+        public override void Init()
         {
             _direction = 1;
             _range = range.Random();

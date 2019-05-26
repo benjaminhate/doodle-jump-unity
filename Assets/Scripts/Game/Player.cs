@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
-        public delegate void DeathEvent();
-
-        public delegate void JumpEvent();
-
-        public event DeathEvent OnDeath;
-        public event JumpEvent OnJump;
+        public UnityEvent JumpEvent;
+        public UnityEvent DeathEvent;
     
         public float movementSpeed = 10;
 
@@ -72,12 +69,12 @@ namespace Game
             velocity.y = force;
             _rb.velocity = velocity;
         
-            OnJump?.Invoke();
+            JumpEvent.Invoke();
         }
 
         public void Death()
         {
-            OnDeath?.Invoke();
+            DeathEvent.Invoke();
         }
     }
 }
