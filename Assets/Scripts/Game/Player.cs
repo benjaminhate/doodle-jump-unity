@@ -6,8 +6,10 @@ namespace Game
     [RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
-        public UnityEvent JumpEvent;
-        public UnityEvent DeathEvent;
+        public UnityEvent jumpEvent;
+        public UnityEvent deathEvent;
+    
+        public PlayerInput input;
     
         public float movementSpeed = 10;
 
@@ -39,7 +41,7 @@ namespace Game
 
         private void Update()
         {
-            _movement = Input.GetAxis("Horizontal") * movementSpeed;
+            _movement = input.Horizontal * movementSpeed;
         }
 
         private void FixedUpdate()
@@ -69,12 +71,12 @@ namespace Game
             velocity.y = force;
             _rb.velocity = velocity;
         
-            JumpEvent.Invoke();
+            jumpEvent.Invoke();
         }
 
         public void Death()
         {
-            DeathEvent.Invoke();
+            deathEvent.Invoke();
         }
     }
 }

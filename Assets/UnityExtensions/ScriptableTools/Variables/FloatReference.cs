@@ -7,7 +7,7 @@
 
 using System;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace UnityExtensions.ScriptableTools.Variables
 {
     [Serializable]
     public class FloatReference

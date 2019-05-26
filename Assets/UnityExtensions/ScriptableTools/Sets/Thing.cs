@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Sets
+namespace UnityExtensions.ScriptableTools.Sets
 {
     public class Thing : MonoBehaviour
     {

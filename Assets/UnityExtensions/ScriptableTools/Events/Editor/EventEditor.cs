@@ -8,10 +8,10 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Events
+namespace UnityExtensions.ScriptableTools.Events.Editor
 {
     [CustomEditor(typeof(GameEvent))]
-    public class EventEditor : Editor
+    public class EventEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {

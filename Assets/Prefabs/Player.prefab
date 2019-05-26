@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 7544287483481159827}
   - component: {fileID: 7571297945310430491}
   - component: {fileID: 7544287483481159826}
+  - component: {fileID: 7037054816783580773}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -86,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 7544287483481159839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 335178393094824122}
   m_Father: {fileID: 0}
@@ -171,7 +172,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -199,8 +200,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0de7e97802d76a41a4415e55ea0f480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 279f7e1708489eb4a92894389fbaea2c, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b12bb9a34bd505a40b6551db2759c278, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  input: {fileID: 7037054816783580773}
   movementSpeed: 10
-  leftSprite: {fileID: 0}
-  rightSprite: {fileID: 0}
-  leftJumpingSprite: {fileID: 0}
-  rightJumpingSprite: {fileID: 0}
+  leftSprite: {fileID: 21300024, guid: a97cc4ebfadf8bc4b9bb0779584dff56, type: 3}
+  rightSprite: {fileID: 21300026, guid: a97cc4ebfadf8bc4b9bb0779584dff56, type: 3}
+  leftJumpingSprite: {fileID: 21300008, guid: a97cc4ebfadf8bc4b9bb0779584dff56, type: 3}
+  rightJumpingSprite: {fileID: 21300006, guid: a97cc4ebfadf8bc4b9bb0779584dff56, type: 3}
+--- !u!114 &7037054816783580773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544287483481159839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689163f8ff1f9c34a89fe214d5fac4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftRect: {fileID: 0}
+  rightRect: {fileID: 0}

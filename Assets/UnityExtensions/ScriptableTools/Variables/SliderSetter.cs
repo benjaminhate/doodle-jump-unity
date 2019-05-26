@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace UnityExtensions.ScriptableTools.Variables
 {
     [ExecuteInEditMode]
     public class SliderSetter : MonoBehaviour

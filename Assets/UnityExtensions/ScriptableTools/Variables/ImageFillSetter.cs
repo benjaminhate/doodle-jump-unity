@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace UnityExtensions.ScriptableTools.Variables
 {
     /// <summary>
     /// Sets an Image component's fill amount to represent how far Variable is

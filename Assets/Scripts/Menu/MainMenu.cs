@@ -24,7 +24,20 @@ namespace Menu
         {
             SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
         }
-    
-    
+
+        public void OnQuitPressed()
+        {
+            Application.Quit();
+        }
+        
+#if UNITY_ANDROID
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+        }
+#endif
     }
 }

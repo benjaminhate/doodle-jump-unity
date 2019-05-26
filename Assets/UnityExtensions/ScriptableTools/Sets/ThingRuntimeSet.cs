@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Sets
+namespace UnityExtensions.ScriptableTools.Sets
 {
     [CreateAssetMenu(menuName = "ScriptableTools/ThingRuntimeSet")]
     public class ThingRuntimeSet : RuntimeSet<Thing>
